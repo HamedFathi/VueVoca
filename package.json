@@ -1,0 +1,38 @@
+{
+  "name": "vue-voca",
+  "version": "1.0.0",
+  "private": false,
+  "scripts": {
+    "serve": "vue-cli-service serve ./example/main.ts --open",
+    "build": "vue-cli-service build --name vue-voca --entry ./src/vue-voca.ts --target lib",
+    "prepublishOnly": "npm run build",
+    "ts-declaration": "tsc --emitDeclarationOnly",
+    "pack": "npm run build && tsc --emitDeclarationOnly && npm pack"
+  },
+  "dependencies": {
+    "@types/voca": "^1.4.0",
+    "voca": "^1.4.0",
+    "vue": "^2.6.7"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-typescript": "^3.4.1",
+    "@vue/cli-service": "^3.4.1",
+    "typescript": "^3.3.3333",
+    "vue-cli-plugin-component": "^1.10.5",
+    "vue-template-compiler": "^2.6.7"
+  },
+  "files": [
+    "dist/*.css",
+    "dist/*.map",
+    "dist/*.js",
+    "src/*"
+  ],
+  "keywords": [
+    "vue",
+    "component"
+  ],
+  "types": "src/vue-voca.d.ts",
+  "typings": "src/vue-voca.d.ts",
+  "main": "dist/vue-voca.umd.js",
+  "module": "dist/vue-voca.common.js"
+}
